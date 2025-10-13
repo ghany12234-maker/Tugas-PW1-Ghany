@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Mahasiswa</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        form {
+            width: 70%;
+            margin: 0 auto;
+            padding: 10px;
+        }
+        fieldset {
+            margin-bottom: 20px;
+            padding: 15px;
+        }
+        legend {
+            font-weight: bold;
+        }
+        label {
+            display: inline-block;
+            width: 150px; /* Lebar label agar sejajar */
+        }
+        input[type="text"], input[type="number"], textarea {
+            width: 60%;
+            padding: 5px;
+            box-sizing: border-box;
+            margin-bottom: 5px;
+        }
+        .input-line {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Form Mahasiswa</h2>
+    <form action="#" method="post">
+        
+        <fieldset>
+            <legend>Data Mahasiswa</legend>
+            <div class="input-line">
+                <label for="nama">Nama</label>
+                : <input type="text" id="nama" name="Ghany">
+            </div>
+            <div class="input-line">
+                <label for="npm">NPM</label>
+                : <input type="text" id="npm" name="5520124040">
+            </div>
+            <div class="input-line">
+                <label for="kelas">Kelas</label>
+                : <input type="text" id="kelas" name="if b" style="width: 20%;">
+            </div>
+            <div class="input-line">
+                <label>Jenis Kelamin</label>
+                : 
+                <input type="radio" id="pria" name="jenis_kelamin" value="Pria">
+                <label for="pria" style="width: auto;">Pria</label>
+                <input type="radio" id="wanita" name="jenis_kelamin" value="Wanita">
+                <label for="wanita" style="width: auto;">Wanita</label>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Tempat Tinggal Mahasiswa</legend>
+            <div class="input-line">
+                <label for="alamat">Alamat</label>
+                : <textarea id="alamat" name="alamat" rows="4"></textarea>
+            </div>
+            <div class="input-line">
+                <label for="kecamatan">Kecamatan</label>
+                : <input type="text" id="kecamatan" name="kecamatan">
+            </div>
+            <div class="input-line">
+                <label for="kota">Kabupaten/Kotamadya</label>
+                : <input type="text" id="kota" name="kota">
+            </div>
+            <div class="input-line">
+                <label for="provinsi">Provinsi</label>
+                : <input type="text" id="provinsi" name="provinsi">
+            </div>
+            <div class="input-line">
+                <label for="kode_pos">Kode Pos</label>
+                : <input type="text" id="kode_pos" name="kode_pos" style="width: 20%;">
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Lain-lainnya</legend>
+            <div class="input-line">
+                <label>Bahasa Pemrograman</label>
+                : 
+                <input type="checkbox" id="c++" name="bahasa[]" value="C/C++"> <label for="c++" style="width: auto;">C/C++</label>
+                <input type="checkbox" id="golang" name="bahasa[]" value="Go Lang"> <label for="golang" style="width: auto;">Go Lang</label>
+                <input type="checkbox" id="python" name="bahasa[]" value="Python"> <label for="python" style="width: auto;">Python</label>
+                <input type="checkbox" id="lainnya_bhs" name="bahasa[]" value="Lainnya"> <label for="lainnya_bhs" style="width: auto;">Lainnya</label><br>
+                <label style="width: 155px;"></label> &nbsp; id="php" name="bahasa[]" value="PHP"> <label for="php" style="width: auto;">PHP</label>
+                <input type="checkbox" id="javascript" name="bahasa[]" value="Javascript"> <label for="javascript" style="width: auto;">Javascript</label>
+                <input type="checkbox" id="ruby" name="bahasa[]" value="Ruby"> <label for="ruby" style="width: auto;">Ruby</label>
+            </div>
+            
+            <div class="input-line">
+                <label>Kegiatan</label>
+                : 
+                <input type="checkbox" id="org_mahasiswa" name="kegiatan[]" value="Organisasi Kemahasiswaan"> <label for="org_mahasiswa" style="width: auto;">Organisasi Kemahasiswaan</label>
+                <input type="checkbox" id="bid_olahraga" name="kegiatan[]" value="Bidang Olahraga"> <label for="bid_olahraga" style="width: auto;">Bidang Olahraga</label>
+                <input type="checkbox" id="lainnya_keg" name="kegiatan[]" value="Lainnya"> <label for="lainnya_keg" style="width: auto;">Lainnya</label><br>
+                <label style="width: 155px;"></label> &nbsp; 
+                <input type="checkbox" id="org_luar" name="kegiatan[]" value="Organisasi di Luar Kampus"> <label for="org_luar" style="width: auto;">Organisasi di Luar Kampus</label>
+                <input type="checkbox" id="bid_seni" name="kegiatan[]" value="Bidang Seni"> <label for="bid_seni" style="width: auto;">Bidang Seni</label>
+            </div>
+        </fieldset>
+
+        <p style="text-align: right; width: 70%; margin: 10px auto;">
+            <input type="reset" value="Reset">
+            <input type="submit" value="Submit">
+        </p>
+
+    </form>
+
+</body>
+</html>
+
+                <input type="checkbox" …
