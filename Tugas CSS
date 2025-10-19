@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan Layout HTML/CSS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        Header
+    </header>
+
+    <nav class="nav-container">
+        <div class="logo">Logo</div>
+        <ul class="menu">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="tentang.html">Tentang Kami</a></li>
+            <li><a href="kontak.html">Kontak</a></li>
+        </ul>
+    </nav>
+
+    <main class="main-container">
+        <article>
+            <h2>Judul Artikel</h2>
+            <p>Ini adalah paragraf konten. Silakan berkreasi untuk isian lainnya.</p>
+            <img src="https://via.placeholder.com/300x150?text=Gambar+Konten" alt="Contoh Gambar">
+            
+            <h3>Tabel Contoh</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Kolom A</th>
+                        <th>Kolom B</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Data 1</td>
+                        <td>Data 2</td>
+                    </tr>
+                    <tr>
+                        <td>Data 3</td>
+                        <td>Data 4</td>
+                    </tr>
+                </tbody>
+            </table>
+        </article>
+
+        <aside>
+            <h4>Informasi Samping</h4>
+            <p>Ini adalah konten pendukung yang relevan dengan artikel.</p>
+            <ul>
+                <li>Link Terkait 1</li>
+                <li>Link Terkait 2</li>
+            </ul>
+        </aside>
+    </main>
+
+    <footer>
+        Footer &copy; 2025
+    </footer>
+</body>
+</html>
+
+
+/* ketentuan */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Latar belakang body */
+}
+
+header {
+    background-color: #007bff; /* Biru */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer {
+    background-color: #333; /* Abu-abu tua */
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.nav-container {
+    background-color: #ffc107; /* Kuning */
+    padding: 10px 20px;
+    display: flex; / Menggunakan Flexbox untuk memposisikan logo dan menu /
+    justify-content: space-between;/ Menempatkan logo di kiri dan menu di kanan /
+    align-items: center;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.menu li {
+    margin-left: 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #333;
+    padding: 5px;
+}
+
+.main-container {
+    display: grid;
+    /* Membuat dua kolom: article (70% lebar) dan aside (30% lebar) */
+    grid-template-columns: 70% 30%; 
+    gap: 20px;
+    padding: 20px;
+}
+
+article {
+    background-color: #ffffff; /* Putih */
+    padding: 20px;
+    border: 1px solid #ddd;
+}
+
+aside {
+    background-color: #e9ecef; /* Abu-abu muda */
+    padding: 20px;
+    border: 1px solid #ddd;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+@media (max-width: 768px) {
+    .main-container {
+        grid-template-columns: 1fr; /* Satu kolom penuh */
+    }
+}
