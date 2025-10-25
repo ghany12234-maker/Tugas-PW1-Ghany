@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll to Top Button</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="top-page-header">
+        <h1>Header Halaman (Top Page Header)</h1>
+    </header>
+
+    <main>
+        <p>Gulir ke bawah untuk melihat tombol kembali ke atas.</p>
+        <div style="height: 2500px; background-color: #f0f0f0; padding: 20px;">
+            <p>Konten panjang...</p>
+            </div>
+        <p>Akhir Konten.</p>
+    </main>
+    
+    <button id="scrollToTopBtn" title="Kembali ke Atas">
+        &#9650; </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+--2--
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#top-page-header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+#scrollToTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 18px;
+    line-height: 1; 
+    z-index: 1000; 
+
+    opacity: 0; 
+    
+    transition: opacity 0.5s ease-in-out, background-color 0.3s ease;
+}
+
+#scrollToTopBtn:hover {
+    opacity: 1;
+    background-color: #57d85b;
+}
+
+.showBtn {
+    opacity: 1 !important;
+}
+
+--3--
+document.addEventListener('DOMContentLoaded', (event) => {
+    const scrollBtn = document.getElementById("scrollToTopBtn");
+    const header = document.getElementById("top-page-header"); 
+    
+    const scrollFunction = () => {
+        if (window.scrollY > 500) {
+            scrollBtn.classList.add("showBtn");
+        } else {
+            scrollBtn.classList.remove("showBtn");
+        }
+    }
+
+    const topFunction = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth" // Membuat guliran menjadi halus (opsional, untuk UX yang lebih baik)
+        });
+        
+    }
+
+    window.addEventListener("scroll", scrollFunction);
+    
+    scrollBtn.addEventListener("click", topFunction);
+});
